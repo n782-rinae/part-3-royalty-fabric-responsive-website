@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Enquiry | Royalty Fabric</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Contact Royalty Fabric for fabric enquiries, tailoring services and fashion consultations.">
+
+    <meta name="keywords"
+          content="fabric enquiry, tailoring enquiry, contact tailoring services, premium fabrics">
+
+    <meta name="author"
+          content="Rinaye Ndou">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>Enquiry</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="enquiry.html">Enquiry</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <section class="enquiry-form-section">
+
+    <h2>━━━━━━━━━━━━━━━━━━━━━━━━━━
+        📩 Get in Touch
+        We'd love to hear from you!
+━━━━━━━━━━━━━━━━━━━━━━━━━━</h2>
+
+    <form>
+
+        <!-- FULL NAME -->
+        <label>👤 Full Name</label>
+        <input type="text" placeholder="Enter your full name">
+
+        <!-- EMAIL -->
+        <label>📧 Email Address</label>
+        <input type="email" placeholder="example@gmail.com">
+
+        <!-- PHONE -->
+        <label>📞 Phone Number (Optional)</label>
+        <input type="tel" placeholder="+27 XX XXX XXXX">
+
+        <!-- SUBJECT -->
+        <label>📋 Subject</label>
+        <select>
+            <option value="">Select a Subject</option>
+            <option>General Enquiry</option>
+            <option>Booking</option>
+            <option>Feedback</option>
+            <option>Support</option>
+        </select>
+
+        <!-- MESSAGE -->
+        <label>💬 Your Message</label>
+        <textarea placeholder="Type your message here..."></textarea>
+
+        <!-- AGREEMENT -->
+        <label>
+            <input type="checkbox">
+            I agree to be contacted regarding my enquiry.
+        </label>
+
+        <!-- BUTTON -->
+        <button type="submit">📨 Send Message</button>
+
+    </form>
+
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Royalty Fabric</p>
+</footer>
+<script>
+
+const form = document.getElementById("enquiryForm");
+const message = document.getElementById("formMessage");
+
+form.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const userMessage =
+        document.getElementById("message").value.trim();
+
+    if(name === "" || email === "" || userMessage === ""){
+
+        message.innerHTML =
+            "Please complete all fields.";
+
+        message.style.color = "red";
+
+        return;
+    }
+
+    message.innerHTML =
+        "Thank you! Your enquiry has been submitted.";
+
+    message.style.color = "lightgreen";
+
+    form.reset();
+
+});
+
+</script>
+<a href="https://wa.me/27685635944" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-tooltip">Chat with us</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+<script src="js/script.js"></script>
+
+</body>
+</html>
